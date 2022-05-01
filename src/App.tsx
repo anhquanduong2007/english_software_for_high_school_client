@@ -1,30 +1,15 @@
 import React from 'react';
-import { RootState } from './redux/store'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from './features/test'
-function App() {
-  const count = useSelector((state: RootState) => state.counter.value)
-  const dispatch = useDispatch()
+import Header from './components/Header';
+import {
+  BrowserRouter,
+} from "react-router-dom"
+const App = () => {
   return (
-    <div className="App">
-      <div>
-        <div>
-          <button
-            aria-label="Increment value"
-            onClick={() => dispatch(increment())}
-          >
-            Increment
-          </button>
-          <span>{count}</span>
-          <button
-            aria-label="Decrement value"
-            onClick={() => dispatch(decrement())}
-          >
-            Decrement
-          </button>
-        </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
