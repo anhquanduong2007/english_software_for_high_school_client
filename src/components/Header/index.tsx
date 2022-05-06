@@ -8,7 +8,7 @@ type Inputs = {
 const Header = () => {
     const { register, handleSubmit } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = data => console.log(data)
-
+    console.log("dmm")
     return (
         <div className="bg-[#444791] h-[4.8rem] flex justify-between items-center text-white px-6">
             <Link to="/">English Teams</Link>
