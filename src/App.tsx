@@ -10,7 +10,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route path="/login" element={<Login />} />
         </Routes>
